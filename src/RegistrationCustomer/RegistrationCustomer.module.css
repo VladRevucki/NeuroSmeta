@@ -1,0 +1,86 @@
+.home {
+	width: 100%;
+	max-width: 800px;
+	padding: 2rem;
+	background-color: rgba(17, 24, 39, 0.8);
+	border-radius: 12px;
+	border: 1px solid #1f2937;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.progressBar {
+	width: 100%;
+	height: 6px;
+	background-color: #e9ecef;
+	border-radius: 3px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.progress {
+	height: 100%;
+	background-color: #facc15;
+	width: 0;
+	animation: fillProgress 0.5s forwards;
+}
+
+@keyframes fillProgress {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 60%;
+	}
+}
+
+.home__header {
+	font-size: clamp(1.5rem, 4.5vw, 1.875rem);
+	color: #facc15;
+	margin-bottom: 1.5rem;
+}
+.home__text {
+	color: white;
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+.home__block_btn {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+.home__registration {
+	flex: 1;
+	padding: 1.5rem;
+	border-radius: 8px;
+	background-color: #f8f9fa;
+	border: 2px solid #e9ecef;
+	cursor: pointer;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+}
+.home__registration:hover {
+	transform: translateY(-5px);
+	border-color: #e1930f;
+	box-shadow: 0 10px 15px rgb(255 255 255 / 10%);
+}
+.home__registration.selected {
+	border-color: #cb8815;
+	background-color: rgba(67, 97, 238, 0.05);
+}
+
+.home__registration h3 {
+	color: #facc15;
+	margin-bottom: 0.75rem;
+}
+.home__registration p {
+	color: #6c757d;
+	margin-bottom: 1.5rem;
+}

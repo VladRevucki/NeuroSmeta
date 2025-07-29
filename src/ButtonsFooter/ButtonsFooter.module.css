@@ -1,0 +1,43 @@
+.block__btn {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.button {
+	padding: 0.75rem 1.5rem;
+	font-size: 1rem;
+	font-weight: 500;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.backBtn {
+	background-color: #21273c;
+	color: white;
+
+	&:hover {
+		background-color: #3a4363;
+		transform: translateY(-2px);
+	}
+}
+.sendBtn {
+	background-color: #eab308;
+	color: #111827;
+
+	&:hover {
+		background-color: #facc15;
+		transform: translateY(-2px);
+	}
+}
+
+@media (max-width: 420px) {
+	.block__btn {
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 15px;
+	}
+}
